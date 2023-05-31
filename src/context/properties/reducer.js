@@ -3,6 +3,6 @@ export const reducer = (state, { type, action }) => {
         case "plus":
              return state;
         default:
-             return state
+             return state;
     }
 }
