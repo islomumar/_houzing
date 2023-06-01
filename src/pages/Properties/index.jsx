@@ -1,3 +1,3 @@
-import Properties from '../../components/Properties'
-const PropertiesPage = () => <Properties />
+import PropertiesComponent from '../../components/Properties'
+const PropertiesPage = () => <PropertiesComponent />
 export default PropertiesPage

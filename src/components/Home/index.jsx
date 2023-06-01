@@ -1,10 +1,14 @@
 import React from 'react'
 import { Container } from './style'
+import { InputComponent } from '../Generic'
 
-function Home() {
+function HomeComponent() {
   return (
-    <Container>Home</Container>
+    <Container>
+      Home
+      <InputComponent />
+    </Container>
   )
 }
 
-export default Home
+export default HomeComponent

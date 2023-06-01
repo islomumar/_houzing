@@ -22,7 +22,8 @@ const Wrapper = styled.div`
     height: 64px;
 
     font-size: 16px;
-    width: 1440px;
+    max-width: 1440px;
+    width: 100%;
 `
 const Section = styled.div`
     display: flex;

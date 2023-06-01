@@ -1,7 +1,8 @@
 import React from 'react'
+import { navbar } from "../../utils/navbar"
+import { ButtonComponent } from '../Generic'
 import { Outlet, useNavigate } from 'react-router-dom'
 import { Container, Link, Logo, Main, Section, Wrapper } from './style'
-import { navbar } from "../../utils/navbar"
 function Navbar() {
   const navigate = useNavigate()
   return (
@@ -17,19 +18,21 @@ function Navbar() {
           {/* link */}
           <Section links>
             {
-              navbar?.map(({ id, path, title }) => {
-                return (
-                  <Link className={({ isActive }) => isActive && "active"} key={id()} to={path}>
-                    {title}
-                  </Link>
-                )
+              navbar?.map(({ id, path, title, hidden }) => {
+                if (!hidden) {
+                  return (
+                    <Link className={({ isActive }) => isActive && "active"} key={id()} to={path}>
+                      {title}
+                    </Link>
+                  )
+                }
               })
             }
           </Section>
 
           {/* login and sign in */}
           <Section>
-            <button>sign in</button>
+            <ButtonComponent onClick={() => navigate("/signin")} color={"dark"}>Sign in</ButtonComponent>
           </Section>
         </Wrapper>
       </Main>
